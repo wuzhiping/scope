@@ -5,6 +5,10 @@
     ports:
       - "8080:4040"
     privileged: true
+    environment:
+      - ENABLE_BASIC_AUTH=true
+      - BASIC_AUTH_USERNAME=admin
+      - BASIC_AUTH_PASSWORD=admin
     labels:
       - "works.weave.role=system"
     volumes:
